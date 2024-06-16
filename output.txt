@@ -1,0 +1,133 @@
+Query1
+>>> basicType(T)
+>>> psychic
+    fighting
+    normal
+    dark
+
+Query2
+>>> basicType(dark)
+>>> true
+
+Query3
+>>> monster(MO,T)
+>>> annihilape, ghost.
+    espathra, psychic.
+    flamigo, fighting.
+    lechonk, normal.
+    mabosstiff, dark.
+
+Query4
+>>> monster(mabosstiff,dark)
+>>> true
+
+Query5
+>>> move(MV,T)
+>>> lowKick, fighting.
+    shadowPunch, ghost.
+    rageFist, ghost.
+    bodySlam, normal.
+    psybeam, psychic.
+    quickAttack, normal.
+    lowKick, fighting.
+    shadowBall, ghost.
+    lowKick, fighting.
+    payback, dark.
+    megaKick, normal.
+    closeCombat, fighting.
+    tackle, normal.
+    takeDown, normal.
+    zenHeadButt, psychic.
+    bodySlam, normal.
+    snarl, dark.
+    lick, ghost.
+    bite, dark.
+    bodySlam, normal.
+
+Query6
+>>> move(lowKick,fighting)
+>>> true
+
+Query7
+>>> monsterMove(MO,MV)
+>>> annihilape, lowKick.
+    annihilape, shadowPunch.
+    annihilape, rageFist.
+    annihilape, bodySlam.
+    espathra, psybeam.
+    espathra, quickAttack.
+    espathra, lowKick.
+    espathra, shadowBall.
+    flamigo, lowKick.
+    flamigo, payback.
+    flamigo, megaKick.
+    flamigo, closeCombat.
+    lechonk, tackle.
+    lechonk, takeDown.
+    lechonk, zenHeadButt.
+    lechonk, bodySlam.
+    mabosstiff, snarl.
+    mabosstiff, lick.
+    mabosstiff, bite.
+    mabosstiff, bodySlam.
+
+Query8
+>>> monsterMove(lechonk,lowKick)
+>>> false
+
+Query9
+>>> typeEffectiveness(E,T1,T2)
+>>> weak, psychic, psychic.
+    strong, psychic, fighting.
+    superweak, psychic, dark.
+    ordinary, psychic, ghost.
+    ordinary, psychic, normal.
+    weak, fighting, psychic.
+    ordinary, fighting, fighting.
+    strong, fighting, dark.
+    superweak, fighting, ghost.
+    strong, fighting, normal.
+    strong, dark, psychic.
+    weak, dark, fighting.
+    weak, dark, dark.
+    strong, dark, ghost.
+    ordinary, dark, normal.
+    strong, ghost, psychic.
+    ordinary, ghost, fighting.
+    weak, ghost, dark.
+    strong, ghost, ghost.
+    superweak, ghost, normal.
+    ordinary, normal, psychic.
+    ordinary, normal, fighting.
+    ordinary, normal, dark.
+    superweak, normal, ghost.
+    ordinary, normal, normal.
+
+Query10
+>>> typeEffectiveness(weak,dark,psychic)
+>>> false
+
+Query11
+>>> moreEffective(E1,E2)
+>>> strong, ordinary.
+    ordinary, weak.
+    weak, superweak.
+    strong, weak.
+    ordinary, superweak.
+
+Query12
+>>> moreEffectiveThan(strong,weak)
+>>> true
+
+Query13
+>>> monsterMoveMatch(fighting,annihilape,annihilape,lowKick).
+>>> true 
+
+Query14
+>>> moreEffectiveMoveType(lowKick,lowKick,fighting).
+>>> true
+
+Query15
+>>> moreEffectiveMove(annihilape,lowKick,flamigo,lowKick).
+>>> true
+
